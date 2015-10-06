@@ -3,14 +3,25 @@
  */
 
 
-    var bookApp = angular.module('bookApp', []);
+    var booksControllers = angular.module('booksControllers', []);
 
-    bookApp.controller('BookListController', ['$scope', '$http', function($scope, $http){
+    booksControllers.controller('BookListController', ['$scope', '$http', function($scope,$http){
         $http.get('books/books.json').success(function(data){
             $scope.books = data;
         });
         $scope.orderProp = 'age';
     }]);
+    booksControllers.controller('BookDetailController', ['$scope', '$routeParams', function($scope,$routeParams){
+        $scope.bookId = $routeParams.bookId;
+    }]);
+
+
+    /*bookApp.controller('BookListController', ['$scope', '$http', function($scope, $http){
+        $http.get('books/books.json').success(function(data){
+            $scope.books = data;
+        });
+        $scope.orderProp = 'age';
+    }]);*/
 
     /*bookApp.controller('BookListController', function($scope){
 
