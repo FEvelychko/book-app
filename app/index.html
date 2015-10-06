@@ -1,23 +1,39 @@
 
-    <!DOCTYPE html>
-    <html ng-app = "bookApp">
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title>book-app</title>
+    <!doctype html>
+    <html lang="en" ng-app="bookApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Google Phone Gallery</title>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="controller.js"></script>
     </head>
-    <body ng-controller = "BookListController">
-    <ul>
-        <li ng-repeat="book in books">
-            {{book.name}}
-            <p>{{book.writer}}</p>
-        </li>
-    </ul>
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <body ng-controller="BookListController">
 
-    <script src="controller.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+                Search: <input ng-model="query">
+                Sort by:
+                <select ng-model="orderProp">
+                    <option value="name">Alphabetical</option>
+                    <option value="age">Newest</option>
+                </select>
+
+            </div>
+            <div class="col-md-10">
+
+                <ul class="phones">
+                    <li ng-repeat="book in books | filter:query | orderBy:orderProp">
+                        <span>{{book.name}}</span>
+                        <p>{{book.writer}}</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
     </body>
     </html>

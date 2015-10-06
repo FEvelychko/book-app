@@ -6,18 +6,18 @@
     var bookApp = angular.module('bookApp', []);
 
     bookApp.controller('BookListController', function($scope){
-        $scope.books = [
-            {
-                "name":"Angular",
-                "writer":"Max Smith"
-            },
-            {
-                "name":"JavaScript",
-                "writer":"Vlad Kuznecov"
-            },
-            {
-                "name":"PHP",
-                "writer":"Andrew Kysil"
-            }
-        ]
+
+     $scope.books = [
+        {'name': 'React',
+        'writer': 'Max Smith',
+        'age': 3},
+        {'name': 'Angular',
+        'writer': 'Vlad Smith',
+        'age': 5},
+        {'name': 'Vanilla',
+        'writer': 'Andrew Smith',
+        'age': 20}
+     ];
+
+        $scope.orderProp = 'age';
     });
