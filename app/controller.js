@@ -5,7 +5,14 @@
 
     var bookApp = angular.module('bookApp', []);
 
-    bookApp.controller('BookListController', function($scope){
+    bookApp.controller('BookListController', ['$scope', '$http', function($scope, $http){
+        $http.get('books/books.json').success(function(data){
+            $scope.books = data;
+        });
+        $scope.orderProp = 'age';
+    }]);
+
+    /*bookApp.controller('BookListController', function($scope){
 
      $scope.books = [
         {'name': 'React',
@@ -20,4 +27,4 @@
      ];
 
         $scope.orderProp = 'age';
-    });
+    });*/
