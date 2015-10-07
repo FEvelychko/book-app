@@ -11,8 +11,124 @@
        width: 100px;
      }
 
+    .thumbnail {
+        display: block;
+        padding: 4px;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+    }
+
     .books li {
        clear: both;
        height: 115px;
        padding-top: 15px;
      }
+
+
+    /** Detail View **/
+    img.book {
+        float: left;
+        border: 1px solid black;
+        margin-right: 3em;
+        margin-bottom: 2em;
+        background-color: white;
+        padding: 2em;
+        height: 400px;
+        width: 400px;
+    }
+
+    ul.book-thumbs {
+        margin: 0;
+        list-style: none;
+    }
+
+    ul.book-thumbs li {
+        border: 1px solid black;
+        display: inline-block;
+        margin: 1em;
+        background-color: white;
+    }
+
+    ul.book-thumbs img {
+        height: 100px;
+        width: 100px;
+        padding: 1em;
+    }
+
+    ul.specs {
+        clear: both;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul.specs > li{
+        display: inline-block;
+        width: 200px;
+        vertical-align: top;
+    }
+
+    ul.specs > li > span{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    ul.specs dt {
+        font-weight: bold;
+    }
+
+    h1 {
+        border-bottom: 1px solid orange;
+        text-align: center;
+    }
+    h3 {
+        border-bottom: 1px solid green;
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+        color: darkgoldenrod;
+    }
+    .listBooks{
+        font-size: xx-large;
+        text-align: center;
+        color: darkgoldenrod;
+    }
+    p.shortText{
+        font-size: larger;
+        font-family: monospace;
+    }
+    p.biography{
+        padding-top: 100px;
+        font-size: larger;
+        font-family: cursive;
+    }
+    ul.writer-thumbs{
+        margin: 0;
+        list-style: none;
+        width: 450px;
+    }
+    .writerli{
+        display: block;
+        padding: 4px;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+    }
+    h3.to-list{
+        float: left;
+          border-bottom: hidden;
+        text-align: left;
+        background-color: darkturquoise;
+    }

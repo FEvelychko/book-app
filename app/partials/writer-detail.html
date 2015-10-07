@@ -1,0 +1,23 @@
+
+    <!--<img ng-src="{{book.images[0]}}" class="book">-->
+
+    <h3 class = "to-list"><a href="#home/">To list</a></h3>
+    <h2>{{writer.name}}</h2>
+
+    <div class="container">
+        <div class="row">
+            <p class = "biography">{{writer.biography}}</p>
+            <div style = "display: table;margin: 0 auto;">
+                <p class = "listBooks">Books</p>
+                <ul class = "writer-thumbs">
+                    <li class = "writerli">
+                        <a href="#home/books/{{writer.book}}">{{writer.book}}</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--detail view for <span>{{bookId}}</span>-->

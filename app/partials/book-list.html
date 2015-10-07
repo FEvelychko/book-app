@@ -4,10 +4,16 @@
             <div class="col-md-2">
 
                 Search: <input ng-model="query">
-                Sort by:
+                <!--Sort by:
                 <select ng-model="orderProp">
                     <option value="name">Alphabetical</option>
                     <option value="age">Age</option>
+                </select>-->
+                Filter by Genre:
+                <select ng-model="queryGenre" ng-options="genre.genre for genre in books">
+                    <!--<option ng-repeat = "gen in books" value="genre">
+                        {{gen.genre}}
+                    </option>-->
                 </select>
 
             </div>
@@ -17,11 +23,11 @@
                     <!--<li ng-repeat="book in books | filter:query | orderBy:orderProp">
                         <span>{{book.name}}</span>
                     </li>-->
-                    <li class="thumbnail" ng-repeat="book in books | filter:query | orderBy:orderProp">
-                        <a class="thumb" href="#/books/{{book.id}}"><img ng-src="{{book.imageUrl}}"/></a>
-                        <a href="#book/{{book.id}}">{{book.name}}</a>
-                        <p>{{book.writer}}</p>
-                    </li>
+                    <li class="thumbnail" ng-repeat="book in books | filter:query | filter:queryGenre">
+                        <a class="thumb" href="#home/books/{{book.id}}"><img ng-src="{{book.imageUrl}}"/></a>
+                        <a href="#home/books/{{book.id}}">{{book.name}}</a>
+                        <a href="#home/writers/{{book.author}}">{{book.writer}}</a>
+                    </li>>
                     <!--<li ng-repeat="book in books | filter:query | orderBy:orderProp">
                         <span>{{book.name}}</span>
                         <p>{{book.writer}}</p>

@@ -9,19 +9,21 @@
         $http.get('books/books.json').success(function(data){
             $scope.books = data;
         });
-        $scope.orderProp = 'age';
+        //$scope.orderProp = 'age';
+        //$scope.orderGenre = 'genre';
+        //$scope.queryAllGenre = 'all';
     }]);
-    booksControllers.controller('BookDetailController', ['$scope', '$routeParams', function($scope,$routeParams){
-        $scope.bookId = $routeParams.bookId;
-    }]);
-
-
-    /*bookApp.controller('BookListController', ['$scope', '$http', function($scope, $http){
-        $http.get('books/books.json').success(function(data){
-            $scope.books = data;
+    booksControllers.controller('BookDetailController', ['$scope', '$routeParams', '$http', function($scope,$routeParams,$http){
+        //$scope.bookId = $routeParams.bookId;
+        $http.get('books/' + $routeParams.bookId + '.json').success(function(data){
+            $scope.book = data;
         });
-        $scope.orderProp = 'age';
-    }]);*/
+    }]);
+    booksControllers.controller('WriterDetailController', ['$scope', '$routeParams', '$http', function($scope,$routeParams,$http){
+        $http.get('writers/' + $routeParams.writerId + '.json').success(function(data){
+            $scope.writer = data;
+        })
+    }]);
 
     /*bookApp.controller('BookListController', function($scope){
 

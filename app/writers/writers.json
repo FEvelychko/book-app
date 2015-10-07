@@ -1,0 +1,27 @@
+
+[
+  {
+    "id":"max",
+    "book": "React",
+    "age": 3},
+  {
+    "id":"vlad",
+    "name": "Angular",
+    "age": 5},
+  {
+    "id":"andrew",
+    "name": "Vanilla",
+    "age": 20},
+  {
+    "id":"yaroslav",
+    "name": "Jquery",
+    "age": 13},
+  {
+    "id":"angela",
+    "name": "CoffeeScript",
+    "age": 5},
+  {
+    "id":"vanya",
+    "name": "ExtJs",
+    "age": 4}
+]
