@@ -1,6 +1,10 @@
 
     .books {
       list-style: none;
+        padding-top: 50px;
+    }
+    html * {
+        outline: 0 !important;
     }
 
     .thumb {
@@ -103,6 +107,7 @@
     p.shortText{
         font-size: larger;
         font-family: monospace;
+        margin-top: 50px;
     }
     p.biography{
         padding-top: 100px;
@@ -127,8 +132,90 @@
         transition: border .2s ease-in-out;
     }
     h3.to-list{
-        float: left;
+        margin: 50px auto;
           border-bottom: hidden;
-        text-align: left;
-        background-color: darkturquoise;
+        /*background-color: darkturquoise;*/
     }
+
+    .pageTitle{
+        color: grey;
+        font-family: cursive;
+        border-bottom: none;
+    }
+    .searchig{
+        display: table;
+        margin: 0 auto;
+    }
+    .search{
+        font-family: cursive;
+        color: goldenrod;
+    }
+    .inputSearch{
+        font-size: x-large;
+        font-family: monospace;
+        height: 30px;
+        width: 300px;
+        background-color: darkseagreen;
+        border-style: hidden;
+    }
+    .book-name{
+        color: goldenrod;
+        font-family: cursive;
+        font-size: large;
+    }
+    .writer-name{
+        color: goldenrod;
+        font-family: cursive;
+        font-size: large;
+    }
+    .col-height{
+        height: 35px;
+    }
+    .col-text{
+        text-align: center;
+    }
+    .insideRow{
+        display: flex;
+    }
+    /*@media (max-width: 1000px) and (min-width: 400px) {
+        .col-height{
+            height: 35px;
+        }
+        .insideRow{
+            height: 35px;
+        }
+        .col-md-2{
+            width: 30%;
+        }
+        .col-md-10{
+            width: 70%;
+        }
+    }*/
+    .search-h3 {
+        border-bottom: none;
+        text-align: center;
+    }
+    .searchGenre{
+        font-family: cursive;
+        color: chocolate;
+    }
+    .thumbnail-writer{
+        height: 100px;
+        display: block;
+        padding: 4px;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+    }
+    .margin-title{
+        margin-left: 10%;
+        font-size: x-large;
+        font-family: cursive;
+    }
+
+

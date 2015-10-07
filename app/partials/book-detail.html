@@ -1,15 +1,20 @@
 
-    <!--<img ng-src="{{book.images[0]}}" class="book">-->
-    <h3 class = "to-list"><a href="#home/">To list</a></h3>
-    <h1>{{book.name}}</h1>
-    <h3><a href="#home/writers/{{book.author}}">{{book.writer}}</a></h3>
-    <h3>{{book.genre}}</h3>
-
     <div class="container">
         <div class="row">
-            <p class = "shortText">{{book.shortText}}</p>
+            <h1 class = "pageTitle">{{book.name}}</h1>
+        </div>
+        <div class="row">
+            <h3 class="search-h3"><a class = "search" href="#home/writers/{{book.author}}">{{book.writer}}</a></h3>
+        </div>
+        <div class="row">
+            <h3 class="search-h3"><a class = "searchGenre" href="#home/writers/{{book.author}}">{{book.genre}}</a></h3>
+        </div>
+            <div class="row">
+                <p class = "shortText">{{book.shortText}}</p>
+            </div>
+        <div class="row">
+            <h3 class = "to-list"><a href="#home/">To list</a></h3>
         </div>
     </div>
-
 
     <!--detail view for <span>{{bookId}}</span>-->

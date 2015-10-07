@@ -22,10 +22,3 @@
                 redirectTo:'/home'
             });
     }]);
-    bookApp.filter('excludeFrom',[function(){
-        return function(array,expression,comparator){
-            return array.filter(function(item){
-                return !expression || !angular.equals(item,expression);
-            });
-        };
-    }]);

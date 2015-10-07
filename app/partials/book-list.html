@@ -1,39 +1,43 @@
 
+
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <h1 class = "pageTitle">Book Store</h1>
 
-                Search: <input ng-model="query">
-                <!--Sort by:
-                <select ng-model="orderProp">
-                    <option value="name">Alphabetical</option>
-                    <option value="age">Age</option>
-                </select>-->
-                Filter by Genre:
-                <select ng-model="queryGenre" ng-options="genre.genre for genre in books">
-                    <!--<option ng-repeat = "gen in books" value="genre">
-                        {{gen.genre}}
-                    </option>-->
+        </div>
+        <div class="row">
+            <div class="searchig">
+                <h4 class = "search">Search:</h4>
+                <input class = "inputSearch" ng-model="query">
+                <h4 class = "search">Filter by Genre:</h4>
+                <select  class = "inputSearch" ng-model="queryGenre" ng-options="genre.name for genre in genres">
+                    <option value = "">All</option>
                 </select>
-
-            </div>
-            <div class="col-md-10">
-
-                <ul class="books">
-                    <!--<li ng-repeat="book in books | filter:query | orderBy:orderProp">
-                        <span>{{book.name}}</span>
-                    </li>-->
-                    <li class="thumbnail" ng-repeat="book in books | filter:query | filter:queryGenre">
-                        <a class="thumb" href="#home/books/{{book.id}}"><img ng-src="{{book.imageUrl}}"/></a>
-                        <a href="#home/books/{{book.id}}">{{book.name}}</a>
-                        <a href="#home/writers/{{book.author}}">{{book.writer}}</a>
-                    </li>>
-                    <!--<li ng-repeat="book in books | filter:query | orderBy:orderProp">
-                        <span>{{book.name}}</span>
-                        <p>{{book.writer}}</p>
-                    </li>-->
-                </ul>
-
             </div>
         </div>
+        <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <ul class="books">
+                        <li class="thumbnail" ng-repeat="book in books | filter:query | filter:queryGenre">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="row insideRow">
+                                        <div class="col-md-2 col-height">
+                                            <a class="thumb" href="#home/books/{{book.id}}"><img ng-src="{{book.imageUrl}}"/></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a class = "book-name" href="#home/books/{{book.id}}">{{book.name}}</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 col-text">
+                                            <a class = "writer-name" href="#home/writers/{{book.author}}">{{book.writer}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </div>

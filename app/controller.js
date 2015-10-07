@@ -9,6 +9,9 @@
         $http.get('books/books.json').success(function(data){
             $scope.books = data;
         });
+        $http.get('genres/genres.json').success(function(data){
+            $scope.genres = data;
+        });
         //$scope.orderProp = 'age';
         //$scope.orderGenre = 'genre';
         //$scope.queryAllGenre = 'all';
@@ -24,20 +27,3 @@
             $scope.writer = data;
         })
     }]);
-
-    /*bookApp.controller('BookListController', function($scope){
-
-     $scope.books = [
-        {'name': 'React',
-        'writer': 'Max Smith',
-        'age': 3},
-        {'name': 'Angular',
-        'writer': 'Vlad Smith',
-        'age': 5},
-        {'name': 'Vanilla',
-        'writer': 'Andrew Smith',
-        'age': 20}
-     ];
-
-        $scope.orderProp = 'age';
-    });*/
