@@ -7,15 +7,15 @@
     bookApp.config(['$routeProvider', function($routeProvider){
         $routeProvider.
             when('/home',{
-            templateUrl: 'partials/book-list.html',
+            templateUrl: 'views/book-list.html',
             controller: 'BookListController'
         }).
             when('/home/books/:bookId',{
-                templateUrl: 'partials/book-detail.html',
+                templateUrl: 'views/book-detail.html',
                 controller: 'BookDetailController'
             }).
             when('/home/writers/:writerId',{
-                templateUrl: 'partials/writer-detail.html',
+                templateUrl: 'views/writer-detail.html',
                 controller: 'WriterDetailController'
             }).
             otherwise({

@@ -4,22 +4,23 @@
         <div class="row">
             <h1 class = "pageTitle">Book Store</h1>
 
-        </div>
+    </div>
         <div class="row">
             <div class="searchig">
                 <h4 class = "search">Search:</h4>
                 <input class = "inputSearch" ng-model="query">
                 <h4 class = "search">Filter by Genre:</h4>
-                <select  class = "inputSearch" ng-model="queryGenre" ng-options="genre.name for genre in genres">
-                    <option value = "">All</option>
+                <select class = "inputSearch" ng-model="selected" data-placeholder="All" ng-options="genre for genre in genres">
                 </select>
+                <!--<p>{{selected}}</p>-->
             </div>
         </div>
         <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <ul class="books">
-                        <li class="thumbnail" ng-repeat="book in books | filter:query | filter:queryGenre">
+                        <li class="thumbnail" ng-repeat="book in books | filter:query | filter:selected">
                             <div class="container">
+                                <!--<p>{{book}}</p>-->
                                 <div class="row">
                                     <div class="row insideRow">
                                         <div class="col-md-2 col-height">

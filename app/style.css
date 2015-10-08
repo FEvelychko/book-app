@@ -164,7 +164,7 @@
         font-size: large;
     }
     .writer-name{
-        color: goldenrod;
+        color: grey;
         font-family: cursive;
         font-size: large;
     }
@@ -216,6 +216,13 @@
         margin-left: 10%;
         font-size: x-large;
         font-family: cursive;
+    }
+    .thumbInside{
+        float: left;
+        margin: 0 25px 0 0;
+        padding-bottom: 1em;
+        height: 100px;
+        width: 100px;
     }
 
 
