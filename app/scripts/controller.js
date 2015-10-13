@@ -11,6 +11,7 @@
         });
         $http.get('data/genres/genres.json').success(function(data){
             $scope.genres = data;
+            $scope.selected = "";
         });
         //$scope.orderProp = 'age';
         //$scope.orderGenre = 'genre';

@@ -10,7 +10,8 @@
                 <h4 class = "search">Search:</h4>
                 <input class = "inputSearch" ng-model="query">
                 <h4 class = "search">Filter by Genre:</h4>
-                <select class = "inputSearch" ng-model="selected" data-placeholder="All" ng-options="genre for genre in genres">
+                <select class = "inputSearch" ng-model="selected" ng-options="genre for genre in genres">
+                    <option value="{{genres}}">All</option>
                 </select>
                 <!--<p>{{selected}}</p>-->
             </div>
